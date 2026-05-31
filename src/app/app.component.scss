@@ -1,0 +1,122 @@
+ .dashboard-shell {
+	min-height: 100vh;
+	display: grid;
+	grid-template-columns: 280px 1fr;
+	background: var(--workspace-bg-color, #f4f7fb);
+}
+
+.dashboard-sidebar {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	padding: 24px 18px;
+	background: var(--workspace-sidebar-color, #17324d);
+	color: var(--workspace-sidebar-contrast, #f8fafc);
+	border-right: 1px solid var(--workspace-border-color, rgba(22, 32, 42, 0.12));
+}
+
+.dashboard-brand {
+	display: flex;
+	align-items: center;
+	gap: 14px;
+	padding: 18px 16px;
+	border-radius: 18px;
+	background: linear-gradient(135deg, var(--workspace-toolbar-color, #2f5d7c), var(--workspace-accent-color, #4c9f70));
+
+	h1 {
+		margin: 0;
+		font-size: 1.1rem;
+		font-weight: 700;
+	}
+
+	p {
+		margin: 4px 0 0;
+		font-size: 0.82rem;
+		opacity: 0.88;
+	}
+}
+
+.brand-icon {
+	width: 40px;
+	height: 40px;
+	font-size: 40px;
+}
+
+.dashboard-sidebar-card {
+	padding: 14px 16px;
+	border-radius: 14px;
+	background: rgba(255, 255, 255, 0.08);
+}
+
+.sidebar-card-label {
+	font-size: 0.78rem;
+	opacity: 0.72;
+	margin-bottom: 4px;
+}
+
+.sidebar-card-value {
+	font-size: 0.98rem;
+	font-weight: 600;
+}
+
+.dashboard-facts {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.dashboard-fact {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 10px 12px;
+	border-radius: 12px;
+	background: rgba(255, 255, 255, 0.05);
+
+	mat-icon {
+		color: var(--workspace-accent-color, #4c9f70);
+	}
+}
+
+.dashboard-main {
+	min-width: 0;
+}
+
+.dashboard-toolbar {
+	position: sticky;
+	top: 0;
+	z-index: 5;
+	display: flex;
+	gap: 12px;
+	background: var(--workspace-toolbar-color, #2f5d7c) !important;
+	color: var(--workspace-toolbar-contrast, #f8fafc);
+	box-shadow: 0 2px 8px rgba(15, 23, 42, 0.12);
+}
+
+.toolbar-title {
+	font-weight: 700;
+}
+
+.toolbar-subtitle {
+	opacity: 0.78;
+	font-size: 0.9rem;
+}
+
+.dashboard-content {
+	padding: 24px;
+}
+
+@media (max-width: 960px) {
+	.dashboard-shell {
+		grid-template-columns: 1fr;
+	}
+
+	.dashboard-sidebar {
+		border-right: 0;
+		border-bottom: 1px solid var(--workspace-border-color, rgba(22, 32, 42, 0.12));
+	}
+
+	.dashboard-content {
+		padding: 16px;
+	}
+}
